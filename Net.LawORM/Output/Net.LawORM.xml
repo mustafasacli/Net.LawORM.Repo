@@ -1,0 +1,600 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Net.LawORM</name>
+    </assembly>
+    <members>
+        <member name="M:Net.LawORM.Data.Client.ConnectionFactory.CreateConnection(Net.LawORM.Base.ConnectionTypes)">
+            <summary>
+            Creates IConnection object with given parameters.
+            </summary>
+            <param name="connectionString">Connection String</param>
+            <returns>Returns IConnection object.</returns>
+        </member>
+        <member name="M:Net.LawORM.Data.Client.ConnectionFactory.CreateConnection(Net.LawORM.Base.ConnectionTypes,System.String)">
+            <summary>
+            Creates IConnection object with given parameters.
+            </summary>
+            <param name="connType">Connection Type</param>
+            <param name="connectionString">Connection String</param>
+            <returns>Returns IConnection object.</returns>
+        </member>
+        <member name="P:Net.LawORM.Data.Client.IConnection.ConnectionType">
+            <summary>
+            Gets Connection Type Of IConnection.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Data.Client.IConnection.Open">
+            <summary>
+            Opens Database connection.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Data.Client.IConnection.Close">
+            <summary>
+            Closes Database connection.
+            </summary>
+        </member>
+        <member name="P:Net.LawORM.Data.Client.IConnection.ConnectionState">
+            <summary>
+            Gets Connection State of database Connection.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Data.Client.IConnection.CreateTransaction">
+            <summary>
+            Creates Transaction Object.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Data.Client.IConnection.CreateTransaction(System.Data.IsolationLevel)">
+            <summary>
+            Creates Transaction Object.
+            </summary>
+        </member>
+        <member name="P:Net.LawORM.Data.Client.IConnection.Transaction">
+            <summary>
+            Gets Transaction object.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Data.Client.IConnection.CommitTransaction">
+            <summary>
+            Commits Transaction.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Data.Client.IConnection.RollbackTransaction">
+            <summary>
+            Rollbacks Transaction.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Data.Client.IConnection.CreateAdapter">
+            <summary>
+            Creates DbDataAdapter object.
+            </summary>
+            <returns>Returns System.Data.Common.DbDataAdapter object.</returns>
+        </member>
+        <member name="M:Net.LawORM.Data.Client.IConnection.CreateCommand">
+            <summary>
+            Creates DbCommand object.
+            </summary>
+            <returns>Returns System.Data.Common.DbCommand object.</returns>
+        </member>
+        <member name="P:Net.LawORM.Data.Client.IConnection.ConnectionStringBuilder">
+            <summary>
+            Creates DbConnectionStringBuilder object.
+            </summary>
+            <returns>Returns System.Data.Common.DbConnectionStringBuilder object.</returns>        
+        </member>
+        <member name="P:Net.LawORM.Data.Client.IConnection.ConnectionString">
+            <summary>
+            Gets, Sets Connection String Of IConnection
+            </summary>
+        </member>
+        <member name="P:Net.LawORM.Data.Client.IConnection.Database">
+            <summary>
+            Gets Database name.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.BaseBO.#ctor">
+            <summary>
+            BaseBO Ctor.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.BaseBO.GetTableName">
+            <summary>
+            Gets Table Name Of BaseBO object.
+            </summary>
+            <returns>Returns Table Name Of BaseBO object.</returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.BaseBO.GetIdColumn">
+            <summary>
+             Gets Identity Column Name Of BaseBO object.
+            </summary>
+            <returns>Returns Identity Column Name Of BaseBO object.</returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.BaseBO.GetColumnChangeList">
+            <summary>
+            Gets Column Name list with property changed.
+            </summary>
+            <returns>Returns Column Name list with property changed.</returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.BaseBO.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj">object instance which inherits BaseBO object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.BaseBO.GetHashCode">
+            <summary>
+            Gets HashCode of object.
+            </summary>
+            <returns>Returns HashCode int.</returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.BaseBO.Serialize(System.String,System.Boolean)">
+            <summary>
+            Write Object serialization result to a file.
+            </summary>
+            <param name="fileName"> File Name for Serialization object writing. </param>
+            <param name="append">if append is true Serialization continues with append.</param>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.BaseBO.Serialize(System.String)">
+            <summary>
+            Write Object serialization result to a file.
+            </summary>
+            <param name="fileName"> File Name for Serialization object writing. </param>
+        </member>
+        <member name="P:Net.LawORM.Entity.Base.BaseBO.ChangeSetCount">
+            <summary>
+            Gets Count of Changed Property.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.BaseBO.IsPropertyChanged(System.String)">
+            <summary>
+            Returns true if Value of Property with given name changes, return true; else returns false.
+            </summary>
+            <param name="propName">Property Name</param>
+            <returns>Returns bool object.</returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.IBaseBO.GetTableName">
+            <summary>
+            Returns Table Name Of IBaseBO object.
+            </summary>
+            <returns>Returns Table Name Of IBaseBO object.</returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.Base.IBaseBO.GetIdColumn">
+            <summary>
+             Returns Identity Name Of IBaseBO object.
+            </summary>
+            <returns>Returns Identity Column Name Of IBaseBO object.</returns>
+        </member>
+        <member name="P:Net.LawORM.Entity.QueryBuilding.IQueryBuilder.Properties">
+            <summary>
+            Gets Property contains parameter(s).
+            </summary>
+        </member>
+        <member name="P:Net.LawORM.Entity.QueryBuilding.IQueryBuilder.QueryString">
+            <summary>
+            Gets Sql Query.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.#ctor(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Create a QueryBuilder with given object and 
+            SqlServer ConnetionTypes and Select QueryTypes.
+            </summary>
+            <param name="queryObject">An object inherits BaseBO object.</param>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.#ctor(Net.LawORM.Entity.QueryBuilding.QueryTypes,Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Create a QueryBuilder with given object and 
+            querytype and SqlServer ConnetionTypes.
+            </summary>
+            <param name="queryType">Query Types of Query Builder.</param>
+            <param name="queryObject">An object inherits BaseBO object.</param>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.#ctor(Net.LawORM.Base.ConnectionTypes,Net.LawORM.Entity.QueryBuilding.QueryTypes,Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Create a QueryBuilder with given object and 
+            querytype and connetiontypes.
+            </summary>
+            <param name="ConnType">Connetion Types of Query Builder.</param>
+            <param name="queryType">Query Types of Query Builder.</param>
+            <param name="queryObject">An object inherits IBaseBO interface.</param>
+        </member>
+        <member name="P:Net.LawORM.Entity.QueryBuilding.QueryBuilder.Properties">
+            <summary>
+            Gets Query Parameters of QueryBuilder.
+            </summary>
+        </member>
+        <member name="P:Net.LawORM.Entity.QueryBuilding.QueryBuilder.QueryString">
+            <summary>
+            Returns Query String of QueryBuilder.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.GetQueryString">
+            <summary>
+            Returns Query String.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.QueryFormat(Net.LawORM.Entity.QueryBuilding.QueryTypes)">
+            <summary>
+            Returns Format of Query according to QueryType.
+            </summary>
+            <param name="queryType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.getCompleteTableName">
+            <summary>
+            Returns Table Name with prefix and suffix.
+            </summary>
+            <returns> Returns Table Name with prefix and suffix. </returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.GetFirstPart">
+            <summary>
+            Returns Second Part of Query format;
+            for Select  Or Delete --> ""
+            for Insert --> Table({0})
+            for Update Set Column=@Column
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.getSecondPart">
+            <summary>
+            Returns Second Part of Query format;
+            for Select --> ""
+            for Insert --> Values({0})
+            for Update Or Delete Where IdColumn=@IdColumn
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.GetParameterPrefix">
+            <summary>
+            Returns Prefix for parameters according to Connection Type.
+            </summary>
+            <returns> Returns Prefix for parameters according to Connection Type.</returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.GetPrefix">
+            <summary>
+            Returns Prefix for columns and tables according to Connection Type.
+            </summary>
+            <returns> Returns Prefix for columns and tables according to Connection Type.</returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.GetSuffix">
+            <summary>
+            Returns Suffix for columns and tables according to Connection Type.
+            </summary>
+            <returns>Returns Suffix for columns and tables according to Connection Type.</returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.GetIdentityInsert">
+            <summary>
+            Returns GetIdentity query part of InsertAndGetId.
+            </summary>
+            <returns> Returns GetIdentity query part of InsertAndGetId. </returns>
+        </member>
+        <member name="M:Net.LawORM.Entity.QueryBuilding.QueryBuilder.ToString">
+            <summary>
+            Returns Query String of QueryBuilder.
+            </summary>
+            <returns>Returns Query String of QueryBuilder.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.#ctor">
+            <summary>
+            protected ctor of BaseDL.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.#ctor(System.String)">
+            <summary>
+            protected ctor of BaseDL.
+            </summary>
+            <param name="connectionName">connection property name</param>
+        </member>
+        <member name="P:Net.LawORM.Logic.BaseDal.BaseDL.ConnectionName">
+            <summary>
+            Gets ConnectionName.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.Insert(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Gets exceution result of Insert Operation.
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>returns Int32</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.InsertAndGetId(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Inserts and Gets Id of BaseBO object.
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>returns Int32</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.Update(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Gets exceution result of Update Operation.
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>returns Int32</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.Delete(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Gets exceution result of Delete Operation.
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>returns Int32</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.GetTable(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Gets All Table Records of BaseBO object.
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>Returns a System.Data.DataTable</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.GetById(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Gets One Record of BaseBO object if any object has BaseBO Id.
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>Returns a System.Data.DataTable</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.GetChangeColumnList(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Gets Columns which baseBo object changelist contains.
+            Example: Column Change List Of BaseBO : Col1, Col2, Col3.
+            Query = Select Col1, Col2, Col3 From TableOfBaseBO;
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>Returns a System.Data.DataTable</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.GetWhereChangeColumnList(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Gets Columns which baseBo object changelist contains.
+            Example: Column Change List Of BaseBO : Col1, Col2, Col3.
+            Query = Select *  From TableOfBaseBO Where Col1=Col1Value And Col2=Col2Value And Col3=Col3Value;
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>Returns a System.Data.DataTable</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.CreateQueryBuilder(Net.LawORM.Entity.QueryBuilding.QueryTypes,Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Create A QueryBuilder object with ConnectionType Of Connection and given querytype and AbstractBaseBo object.
+            </summary>
+            <param name="queryType">QueryType Of QueryBuilder</param>
+            <param name="tableObject">Table class object.</param>
+            <returns>Returns A QueryBuilder object with ConnectionType Of Connection and given querytype and AbstractBaseBo object.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.GetResultSetOfQuery(System.String)">
+            <summary>
+            Returns A DataSet with given Query without any parameter
+            </summary>
+            <param name="query">Sql Query</param>
+            <returns>Returns A DataSet with given Query without any parameter</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.GetResultSetOfProcedure(System.String)">
+            <summary>
+            Gets ResultSet with given Procedure without any parameter.
+            </summary>
+            <param name="query">Sql Procedure</param>
+            <returns>Returns A DataSet with given Procedure without any parameter</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.GetResultSetOfQuery(System.String,Net.LawORM.Base.Property)">
+            <summary>
+            Returns A DataSet with given Query with parameter(s).
+            </summary>
+            <param name="query">Sql Query</param>
+            <param name="parameters">Property which contains parameters</param>
+            <returns>Returns A DataSet with given Query without any parameter</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.GetResultSetOfProcedure(System.String,Net.LawORM.Base.Property)">
+            <summary>
+            Returns A DataSet with given Procedure without any parameter
+            </summary>
+            <param name="query">Sql Procedure</param>
+            <param name="parameters">Property parameters</param>
+            <returns>Returns A DataSet with given Procedure without any parameter</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.ExecuteQuery(System.String)">
+            <summary>
+            Returns execution value of query.
+            </summary>
+            <param name="query">Sql Query</param>
+            <returns>Returns execution value of query.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.ExecuteProcedure(System.String)">
+            <summary>
+            Returns execution value of Procedure.
+            </summary>
+            <param name="query">Sql Procedure</param>
+            <returns>Returns execution value of Procedure.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.ExecuteQuery(System.String,Net.LawORM.Base.Property)">
+            <summary>
+            Returns execution value of query.
+            </summary>
+            <param name="query">Sql Query</param>
+            <param name="parameters">Property contains parameters.</param>
+            <returns>Returns execution value of query with parameters.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.ExecuteProcedure(System.String,Net.LawORM.Base.Property)">
+            <summary>
+            Returns execution value of Procedure.
+            </summary>
+            <param name="query">Sql Procedure</param>
+            <param name="parameters">Property contains parameters.</param>
+            <returns>Returns execution value of Procedure with parameters.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.ExecuteScalarAsQuery(System.String)">
+            <summary>
+            Returns scalar execution value of query.
+            </summary>
+            <param name="query">Sql Query</param>
+            <returns>Returns scalar execution value of query.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.ExecuteScalarAsProcedure(System.String)">
+            <summary>
+            Returns scalar execution value of Procedure.
+            </summary>
+            <param name="query">Sql Procedure</param>
+            <returns>Returns scalar execution value of Procedure.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.ExecuteScalarAsQuery(System.String,Net.LawORM.Base.Property)">
+            <summary>
+            Returns scalar execution value of query with parameters.
+            </summary>
+            <param name="query">Sql Query</param>
+            <param name="parameters">Prperty contains parameters.</param>
+            <returns>Returns scalar execution value of query with parameters.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.ExecuteScalarAsProcedure(System.String,Net.LawORM.Base.Property)">
+            <summary>
+            Returns scalar execution value of Procedure with parameters.
+            </summary>
+            <param name="query">Sql Procedure</param>
+            <param name="parameters">Property contains parameters.</param>
+            <returns>Returns scalar execution value of Procedure with parameters.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.BaseDL.Dispose">
+            <summary>
+            Disposes DbManager object with sub objects.
+            </summary>
+        </member>
+        <member name="P:Net.LawORM.Logic.BaseDal.BaseDL.DriverType">
+            <summary>
+            Gets DriverType of Base DataLayer.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.IBaseDL.Insert(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Inserts BaseBO object and returns execution value.
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>Returns Execution value of Insert query.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.IBaseDL.InsertAndGetId(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Inserts BaseBO object and returns Identity value.
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>Returns Identity value</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.IBaseDL.Delete(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Updates BaseBO object and returns execution value of delete query.
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>returns execution value of delete query.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.IBaseDL.Update(Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Updates BaseBO object and returns execution value of update query.
+            </summary>
+            <param name="baseBO">BaseBO object.</param>
+            <returns>returns execution value of update query.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.BaseDal.IBaseDL.CreateQueryBuilder(Net.LawORM.Entity.QueryBuilding.QueryTypes,Net.LawORM.Entity.Base.BaseBO)">
+            <summary>
+            Returns QueryBuilder object with with given parameters.
+            </summary>
+            <param name="queryType"> Query type for QueryBuilder </param>
+            <param name="tableObject"> BaseBO object </param>
+            <returns> QueryBuilder object</returns>
+        </member>
+        <member name="P:Net.LawORM.Logic.BaseDal.IBaseDL.DriverType">
+            <summary>
+            Returns Driver Type of Data Layer.
+            </summary>
+        </member>
+        <member name="T:Net.LawORM.Logic.Extensions.DataExtensions">
+            <summary>
+            Description of DataExtensions.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Logic.Extensions.DataExtensions.ToList``1(System.Data.DataTable,System.Boolean)">
+            <summary>
+            This method returns A List of T object.
+            </summary>
+            <typeparam name="T">T object type</typeparam>
+            <param name="datatable">Datatble object</param>
+            <param name="accordingToColumn">if it is true, returns a List with DataTable Columns else returns a List with PropertyInfo of Object.</param>
+            <returns>Returns A List of T object.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.Extensions.DataExtensions.GetColumnsOfDataTable(System.Data.DataTable,System.String[])">
+            <summary>
+            Returns a DataTable with Selected column names.
+            </summary>
+            <param name="dt">DataTable object</param>
+            <param name="columnList"> column names array </param>
+            <returns>Returns a DataTable with Selected column names.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.Extensions.DataExtensions.GetColumnsOfDataTable(System.Data.DataTable,System.Int32[])">
+            <summary>
+            Returns a DataTable with Selected column numbers.
+            </summary>
+            <param name="dt">DataTable object</param>
+            <param name="columnList">column numbers array</param>
+            <returns>Returns a DataTable with Selected column numbers.</returns>
+        </member>
+        <member name="M:Net.LawORM.Logic.Extensions.DataExtensions.GetObjectWithSelectedColumn(System.Data.DataTable,System.String,System.Object,System.String)">
+            <summary>
+            Returns a object with given parameters.
+            </summary>
+            <param name="dt">DataTable object</param>
+            <param name="refColumn">Name of Reference Column</param>
+            <param name="refValue">Value of Reference Column</param>
+            <param name="destinationColumn">Name of Destination Column</param>
+            <returns>Returns a object at destination column which contains reference value at reference column. Otherwise return null.</returns>
+        </member>
+        <member name="P:Net.LawORM.Logic.Util.ConfUtil.SaveType">
+            <summary>
+            Gets Save Type Of Transaction Log.
+            </summary>
+        </member>
+        <member name="P:Net.LawORM.Logic.Util.ConfUtil.LogType">
+            <summary>
+            Gets Log Type Of Exceptions.
+            </summary>
+        </member>
+        <member name="P:Net.LawORM.Logic.Util.ConfUtil.SaveFilePath">
+            <summary>
+            Gets Log File Path.
+            </summary>
+        </member>
+        <member name="M:Net.LawORM.Log.Error.FreeLogger.LogMethod(System.Exception,System.String,System.String)">
+            <summary>
+            Logs Exception which handled at given method name and given class name.
+            </summary>
+            <param name="ex">handled exception</param>
+            <param name="className">class name</param>
+            <param name="methodName">method name</param>
+        </member>
+        <member name="M:Net.LawORM.Log.Error.FreeLogger.LogException(System.Exception,System.Reflection.MethodBase,System.Int32)">
+            <summary>
+            Logs exception with given parameters.
+            </summary>
+            <param name="ex">Exception object</param>
+            <param name="method">MethodBase which exception handled in.</param>
+            <param name="userId">User Id</param>
+        </member>
+        <member name="M:Net.LawORM.Log.Error.FreeLogger.LogException(System.Exception,System.Reflection.MethodBase)">
+            <summary>
+            Logs exception with given parameters.
+            </summary>
+            <param name="ex">Exception object</param>
+            <param name="method">MethodBase which exception handled in.</param>
+        </member>
+        <member name="M:Net.LawORM.Log.Error.FreeLogger.LogException(System.Exception,System.String,System.String,System.Int32)">
+            <summary>
+            Logs exception with given parameters.
+            </summary>
+            <param name="ex">Exception object</param>
+            <param name="title">Exception Title.</param>
+            <param name="errorcode">Error Code for Exception.</param>
+            <param name="userId">User Id</param>
+        </member>
+        <member name="M:Net.LawORM.Log.Error.FreeLogger.LogException(System.Exception,System.String,System.String)">
+            <summary>
+            Logs exception with given parameters.
+            </summary>
+            <param name="ex">Exception object</param>
+            <param name="title">Exception Title.</param>
+            <param name="errorcode">Error Code for Exception.</param>
+        </member>
+    </members>
+</doc>
